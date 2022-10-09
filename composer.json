@@ -16,6 +16,22 @@
             "email": "vg.guimaraes@hotmail.com"
         }
     ],
+    "scripts": {
+        "test": "phpunit tests/TestFinder.php",
+        "cs": "phpcs --standard=PSR12 src/",
+        "phan": "phan --allow-polyfill-parser",
+        "check": [
+            "@phan",
+            "@cs",
+            "@test"
+        ],
+        "post-update-cmd": [
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "check": "Roda as verificações do código. PHAN, PHPCS e PHPUNIT"
+    },
     "require": {
         "guzzlehttp/guzzle": "^7.5",
         "symfony/dom-crawler": "^6.1",
