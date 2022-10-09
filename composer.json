@@ -41,5 +41,9 @@
         "phpunit/phpunit": "^9",
         "squizlabs/php_codesniffer": "^3.7",
         "phan/phan": "^5.4"
-    }
+    },
+    "license": "GLP-3.0",
+    "bin": [
+        "findCourses.php"
+    ]
 }
